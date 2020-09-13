@@ -1,14 +1,18 @@
 {
+  "homepage": "http://rohrock.github.io/pets",
   "name": "adopt-me",
   "version": "1.0.0",
   "description": "",
   "main": "App.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +26,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "gh-pages": "^3.1.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.1"
   },
