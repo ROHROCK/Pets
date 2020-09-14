@@ -1,5 +1,5 @@
 {
-  "homepage": "http://rohrock.github.io/pets",
+  "homepage": "http://rohrock.github.io/Pets",
   "name": "adopt-me",
   "version": "1.0.0",
   "description": "",
@@ -9,10 +9,11 @@
     "deploy": "gh-pages -d dist",
     "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
+    "production": "parcel dist/index.html",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build src/index.html"
+    "build": "NODE_ENV=production parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +33,7 @@
   },
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
+    "@reach/router": "^1.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
