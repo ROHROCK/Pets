@@ -51,9 +51,6 @@ class Details extends React.Component {
       name,
       showModal,
     } = this.state;
-    {
-      console.log(this.state);
-    }
     return (
       <div className="details">
         <Carousel media={media} />
