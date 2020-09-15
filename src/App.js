@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Link } from '@reach/router';
-import Details from './Details';
-import SearchParams from './SearchParams';
-import ThemeContext from './ThemeContext';
+import "./App.css";
+import React, { useState } from "react";
+import { Router, Link } from "@reach/router";
+import Details from "./Details";
+import SearchParams from "./SearchParams";
+import ThemeContext from "./ThemeContext";
 
-const App = () => {
-  const theme = useState('darkblue');
+function App() {
+  const theme = useState("darkblue");
   return (
     <ThemeContext.Provider value={theme}>
       <div>
@@ -20,6 +20,6 @@ const App = () => {
       </div>
     </ThemeContext.Provider>
   );
-};
+}
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
