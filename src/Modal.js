@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import ReactDOM from 'react-dom';
 
 let modalRoot = document.getElementById('modal');
 
